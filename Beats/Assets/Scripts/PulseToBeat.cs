@@ -29,6 +29,6 @@ public class PulseToBeat : MonoBehaviour
 
     void PlayParticle()
     {
-        _sporeEffect.Play();  // Play the particle effect when spacebar is pressed
+        _sporeEffect.Play();
     }
 }
