@@ -12,6 +12,6 @@ public class BeatScroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * beatTempo * Time.deltaTime);
+        transform.Translate(Vector3.left * beatTempo * Time.deltaTime);
     }
 }
