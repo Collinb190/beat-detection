@@ -109,7 +109,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1526467514349931115
 MonoBehaviour:
@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatTempo: 120
-  audioSource: {fileID: 0}
 --- !u!54 &5490650262787331314
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -166,3 +165,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  scoreValue: 5

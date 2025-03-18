@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ArrowPress : MonoBehaviour
@@ -6,10 +5,12 @@ public class ArrowPress : MonoBehaviour
     [SerializeField] bool canBePressed;
     [SerializeField] KeyCode keyToPress;
 
+    [SerializeField] private int scoreValue = 10; // Points for each correct hit
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,6 +18,8 @@ public class ArrowPress : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress) && canBePressed)
         {
+            // Call the ScoreManager to add points
+            ScoreManager.instance.AddScore(scoreValue);
             Destroy(gameObject);
         }
     }
@@ -30,6 +33,4 @@ public class ArrowPress : MonoBehaviour
     {
         if (other.tag == "Target") canBePressed = false;
     }
-
-    
 }
