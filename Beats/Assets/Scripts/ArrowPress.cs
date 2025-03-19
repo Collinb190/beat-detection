@@ -6,6 +6,7 @@ public class ArrowPress : MonoBehaviour
     [SerializeField] KeyCode keyToPress;
 
     [SerializeField] private int scoreValue = 10; // Points for each correct hit
+    [SerializeField] private int percent = 1; // top fractal for overall percentage
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,7 +20,7 @@ public class ArrowPress : MonoBehaviour
         if (Input.GetKeyDown(keyToPress) && canBePressed)
         {
             // Call the ScoreManager to add points
-            ScoreManager.instance.AddScore(scoreValue);
+            ScoreManager.instance.AddScore(scoreValue, percent);
             Destroy(gameObject);
         }
     }

@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
 
     private int score = 0;
+    private int percentage = 0;
 
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -24,15 +25,16 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Method to add score
-    public void AddScore(int points)
+    public void AddScore(int points, int percent)
     {
         score += points;
+        percentage += percent;
         UpdateScoreText();
     }
 
     // Method to update the score text UI
     private void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score + "      " + percentage + " / 76";
     }
 }
